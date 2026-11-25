@@ -1,7 +1,7 @@
 FROM php:8.3.36-fpm-bookworm
 
-LABEL maintainer="cytopia <cytopia@everythingcli.org>"
-LABEL org.opencontainers.image.source="https://github.com/devilbox/docker-php-fpm"
+LABEL maintainer="liyang <654516092@qq.com>"
+LABEL org.opencontainers.image.source="devilbox/docker-php-fpm"
 LABEL org.opencontainers.image.vendor="devilbox"
 
 # ========== 全局环境变量 ==========

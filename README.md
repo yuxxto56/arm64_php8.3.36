@@ -3,7 +3,7 @@
 #### 一、amd64架构构建
 
 + 选择一台x86机器进入构建目录直接构建即可
-  > docker build -t  php-fpm:8.3.36-arm64-prod-v001:latest .
+  > docker build -t  php-fpm:8.3.37-arm64-prod-v001 .
   >
 
 #### 二、arm64架构构建
@@ -53,7 +53,6 @@
 
 6、编译跨平台镜像
 
+> docker buildx build -t php-fpm:8.3.37-arm64-prod-v001 --platform linux/arm64 . --load  //保存目标架构镜像
 >
-> docker buildx build -t php-fpm:8.3.36-arm64-prod-v001:latest .super5:latest --platform linux/arm64 . --load  //保存目标架构镜像
->
-> docker buildx build -t php-fpm:8.3.36-arm64-prod-v001:latest .registry/super5:latest --platform linux/arm64,linux/amd64 . --push //多平台镜像编译推送至远程目标仓库
+> docker buildx build -t php-fpm:8.3.37-arm64-prod-v001 --platform linux/arm64,linux/amd64 . --push //多平台镜像编译推送至远程目标仓库
